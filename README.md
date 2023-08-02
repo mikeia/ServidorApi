@@ -1,5 +1,5 @@
 # ServidorApi
 Servidor Api para comunicação com o AppReposicaoEstoque
--Node Js
--Sequelize
--Banco SqlServer 2005
+#-Node Js
+#-Sequelize
+#-Banco SqlServer 2005
