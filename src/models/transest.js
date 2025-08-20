@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const sequelize = require('../db');
 const schema = "dbo";
 
-class TransEst extends Sequelize.Model {}
+class TransEst extends Sequelize.Model { }
 
 TransEst.init(
   {

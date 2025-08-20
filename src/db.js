@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 
-const sequelizeInstance = new Sequelize('xxx', 'xxx', 'xxx', {
+const sequelizeInstance = new Sequelize('Teste', 'testlogin', 'testpassword', {
   dialect: 'mssql',
-  host: 'localhost',
-  port:1433,
+  host: '192.168.0.9',
+  port: 1433,
   define: {
     timestamps: false
   },

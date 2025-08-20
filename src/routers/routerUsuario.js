@@ -3,7 +3,7 @@ const usersReposicao = require('../controllers/UsuarioController');
 
 const routers = express.Router();
 
-routers.post('/Users/userLogin',usersReposicao.PostOne);
+routers.post('/Users/userLogin', usersReposicao.PostOne);
 
 
 module.exports = routers;

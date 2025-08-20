@@ -1,36 +1,36 @@
 const ModelReposicao = require('../models/reposicao');
 
-module.exports = 
+module.exports =
 {
     async GetOne(req, res) {
         try {
-          const { cd_item, cd_empresa } = req.body;
-      
-          const repo = await ModelReposicao.findOne({
-            where: {
-              cd_item: cd_item,
-              cd_empresa: cd_empresa
-            }
-          });
-      
-          return res.json(repo);
+            const { cd_item, cd_empresa } = req.body;
+
+            const repo = await ModelReposicao.findOne({
+                where: {
+                    cd_item: cd_item,
+                    cd_empresa: cd_empresa
+                }
+            });
+
+            return res.json(repo);
         } catch (error) {
-          return res.status(500).json({ error: "A consulta espera o codigo do item e a empresa!" });
+            return res.status(500).json({ error: "A consulta espera o codigo do item e a empresa!" });
         }
     },
-    
-    async Create(req,res){
+
+    async Create(req, res) {
         try {
-            const reposicao = await ModelReposicao.create(      
+            const reposicao = await ModelReposicao.create(
                 {
-                    cd_empresa         : req.body.cd_empresa,
-                    cd_item            : req.body.cd_item,
-                    cd_usuario         : req.body.cd_usuario,
-                    dt_reposicao       : req.body.dt_reposicao,
-                    LocalConfirmado    : req.body.LocalConfirmado,
-                    qt_confirmada      : req.body.qt_confirmada,
-                    confirmado_estoque : req.body.confirmado_estoque,
-                    LocalExcesso       : ""
+                    cd_empresa: req.body.cd_empresa,
+                    cd_item: req.body.cd_item,
+                    cd_usuario: req.body.cd_usuario,
+                    dt_reposicao: req.body.dt_reposicao,
+                    LocalConfirmado: req.body.LocalConfirmado,
+                    qt_confirmada: req.body.qt_confirmada,
+                    confirmado_estoque: req.body.confirmado_estoque,
+                    LocalExcesso: req.body.LocalExcesso
                 }
             );
             return res.json(reposicao);
@@ -38,7 +38,7 @@ module.exports =
         } catch (erro) {
             return res.status(500).json({ error: "Erro de Primary Key!" });
         }
-    },    
+    },
 
 }
 
@@ -81,4 +81,4 @@ module.exports =
         } catch (erro) {
          return console.error("Erro na Delete:",erro);   
         }
-    },  */  
+    },  */
